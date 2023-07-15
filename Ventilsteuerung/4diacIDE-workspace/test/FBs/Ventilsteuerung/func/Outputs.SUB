@@ -107,7 +107,7 @@
 					<Parameter Name="QI" Value="TRUE"/>
 				</FB>
 				<SubApp Name="GreenWhiteBackground1" Type="GreenWhiteBackground1" Comment="" x="5553.333333333334" y="1653.3333333333335">
-					<Parameter Name="u16ObjId" Value="SoftKey_5001"/>
+					<Parameter Name="u16ObjId" Value="SoftKey_5002"/>
 				</SubApp>
 				<FB Name="E_SWITCH_02" Type="E_SWITCH" Comment="" x="1686.6666666666667" y="586.6666666666667">
 				</FB>
