@@ -19,24 +19,34 @@
 				</SubAppEventInputs>
 			</SubAppInterfaceList>
 			<SubAppNetwork>
-				<FB Name="SoftKey_5000" Type="IX" Comment="" x="266.6666666666667" y="0.0">
+				<FB Name="SoftKey_5000" Type="IX" Comment="" x="353.33333333333337" y="320.0">
 					<Parameter Name="QI" Value="TRUE"/>
 				</FB>
-				<FB Name="DigitalOutput_Q1" Type="QX" Comment="" x="2693.3333333333335" y="0.0">
+				<FB Name="DigitalOutput_Q1" Type="QX" Comment="" x="2780.0" y="320.0">
 					<Parameter Name="QI" Value="TRUE"/>
 				</FB>
+				<SubApp Name="GreenWhiteBackground1" Type="GreenWhiteBackground1" Comment="" x="2780.0" y="1306.6666666666667">
+					<Parameter Name="u16ObjId" Value="SoftKey_5000"/>
+				</SubApp>
 				<EventConnections>
+					<Connection Source="SoftKey_5000.IND" Destination="DigitalOutput_Q1.REQ" Comment="" dx1="440.0"/>
+					<Connection Source="INIT" Destination="SoftKey_5000.INIT" Comment="" dx1="200.0">
+						<Attribute Name="Visible" Type="STRING" Value="false"/>
+					</Connection>
+					<Connection Source="INIT" Destination="GreenWhiteBackground1.INIT" Comment="" dx1="1366.6666666666667">
+						<Attribute Name="Visible" Type="STRING" Value="false"/>
+					</Connection>
+					<Connection Source="SoftKey_5000.IND" Destination="GreenWhiteBackground1.REQ" Comment="" dx1="413.33333333333337"/>
 					<Connection Source="SoftKey_5000.INITO" Destination="DigitalOutput_Q1.INIT" Comment=""/>
-					<Connection Source="SoftKey_5000.IND" Destination="DigitalOutput_Q1.REQ" Comment="" dx1="866.6666666666667"/>
-					<Connection Source="INIT" Destination="SoftKey_5000.INIT" Comment="" dx1="80.0" dx2="80.0" dy="86.66666666666667"/>
 				</EventConnections>
 				<DataConnections>
-					<Connection Source="SoftKey_5000.IN" Destination="DigitalOutput_Q1.OUT" Comment="" dx1="866.6666666666667"/>
+					<Connection Source="SoftKey_5000.IN" Destination="DigitalOutput_Q1.OUT" Comment="" dx1="80.0"/>
+					<Connection Source="SoftKey_5000.IN" Destination="GreenWhiteBackground1.DI1" Comment="" dx1="80.0"/>
 				</DataConnections>
 			</SubAppNetwork>
 			<Attribute Name="Unfolded" Type="STRING" Value="true"/>
-			<Attribute Name="width" Type="LREAL" Value="4540.0"/>
-			<Attribute Name="height" Type="LREAL" Value="1740.0"/>
+			<Attribute Name="width" Type="LREAL" Value="4806.666666666667"/>
+			<Attribute Name="height" Type="LREAL" Value="2806.666666666667"/>
 		</SubApp>
 		<EventConnections>
 			<Connection Source="INIT" Destination="Momentary_on.INIT" Comment="" dx1="766.6666666666667">

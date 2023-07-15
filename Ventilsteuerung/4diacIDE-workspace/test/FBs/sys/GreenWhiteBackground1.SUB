@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="GreenWhiteBackground1" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2022-11-10">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="Initialization Request">
+			</SubAppEvent>
+			<SubAppEvent Name="REQ" Type="Event" Comment="Normal Execution Request">
+				<Attribute Name="YPOSITION" Type="STRING" Value="175"/>
+			</SubAppEvent>
+		</SubAppEventInputs>
+		<SubAppEventOutputs>
+			<SubAppEvent Name="INITO_1" Type="Event" Comment="Initialization Confirm">
+				<Attribute Name="YPOSITION" Type="STRING" Value="235"/>
+			</SubAppEvent>
+			<SubAppEvent Name="CNF_1" Type="Event" Comment="Execution Confirmation">
+			</SubAppEvent>
+		</SubAppEventOutputs>
+		<InputVars>
+			<VarDeclaration Name="DI1" Type="BOOL" Comment="Selector">
+				<Attribute Name="YPOSITION" Type="STRING" Value="18"/>
+			</VarDeclaration>
+			<VarDeclaration Name="u16ObjId" Type="UINT" Comment="Object ID Softkey">
+				<Attribute Name="YPOSITION" Type="STRING" Value="45"/>
+			</VarDeclaration>
+		</InputVars>
+		<OutputVars>
+			<VarDeclaration Name="STATUS_1" Type="WSTRING" Comment="Service Status"/>
+			<VarDeclaration Name="u8OldColour_1" Type="USINT" Comment="Old value of ID"/>
+			<VarDeclaration Name="result_1" Type="INT" Comment="retval see description"/>
+		</OutputVars>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<FB Name="Q_BackgroundColour_1" Type="Q_BackgroundColour" Comment="" x="1600.0" y="1500.0">
+		</FB>
+		<FB Name="F_SEL_I" Type="F_SEL" Comment="" x="-466.6666666666667" y="1200.0">
+			<Parameter Name="IN0" Value="COLOR_WHITE"/>
+			<Parameter Name="IN1" Value="COLOR_GREEN"/>
+		</FB>
+		<EventConnections>
+			<Connection Source="INIT" Destination="Q_BackgroundColour_1.INIT" Comment="" dx1="2800.0"/>
+			<Connection Source="Q_BackgroundColour_1.CNF" Destination="CNF_1" Comment="" dx1="380.0"/>
+			<Connection Source="Q_BackgroundColour_1.INITO" Destination="INITO_1" Comment="" dx1="60.0"/>
+			<Connection Source="F_SEL_I.CNF" Destination="Q_BackgroundColour_1.REQ" Comment="" dx1="773.3333333333334" dx2="773.3333333333334" dy="0.0"/>
+			<Connection Source="REQ" Destination="F_SEL_I.REQ" Comment="" dx1="80.0" dx2="80.0" dy="160.0"/>
+		</EventConnections>
+		<DataConnections>
+			<Connection Source="u16ObjId" Destination="Q_BackgroundColour_1.u16ObjId" Comment="" dx1="1460.0"/>
+			<Connection Source="Q_BackgroundColour_1.s16result" Destination="result_1" Comment="" dx1="560.0"/>
+			<Connection Source="Q_BackgroundColour_1.u8OldColour" Destination="u8OldColour_1" Comment="" dx1="673.3333333333334"/>
+			<Connection Source="Q_BackgroundColour_1.STATUS" Destination="STATUS_1" Comment="" dx1="780.0"/>
+			<Connection Source="F_SEL_I.OUT" Destination="Q_BackgroundColour_1.u8Colour" Comment="" dx1="520.0" dx2="773.3333333333334" dy="0.0"/>
+			<Connection Source="DI1" Destination="F_SEL_I.G" Comment="" dx1="80.0" dx2="80.0" dy="160.0"/>
+		</DataConnections>
+	</SubAppNetwork>
+</SubAppType>
