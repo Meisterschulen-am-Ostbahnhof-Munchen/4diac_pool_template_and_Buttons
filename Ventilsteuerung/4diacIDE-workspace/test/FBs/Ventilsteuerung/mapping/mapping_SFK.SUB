@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="mapping_SFK" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2023-02-07">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="">
+			</SubAppEvent>
+		</SubAppEventInputs>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<FB Name="UT_SoftkeyMapping_1" Type="UT_SoftkeyMapping" Comment="" x="0.0" y="0.0">
+			<Parameter Name="QI" Value="TRUE"/>
+			<Parameter Name="u8SAMember" Value="255"/>
+			<Parameter Name="u16ObjId_1" Value="SoftKey_5000"/>
+			<Parameter Name="DigitalInput_1" Value="&quot;SoftKey_5000&quot;"/>
+			<Parameter Name="u16ObjId_2" Value="SoftKey_5001"/>
+			<Parameter Name="DigitalInput_2" Value="&quot;SoftKey_5001&quot;"/>
+			<Parameter Name="u16ObjId_3" Value="SoftKey_5002"/>
+			<Parameter Name="DigitalInput_3" Value="&quot;SoftKey_5002&quot;"/>
+			<Parameter Name="u16ObjId_4" Value="SoftKey_5003"/>
+			<Parameter Name="DigitalInput_4" Value="&quot;SoftKey_5003&quot;"/>
+			<Parameter Name="u16ObjId_5" Value="SoftKey_5004"/>
+			<Parameter Name="DigitalInput_5" Value="&quot;SoftKey_5004&quot;"/>
+			<Parameter Name="u16ObjId_6" Value="SoftKey_5005"/>
+			<Parameter Name="DigitalInput_6" Value="&quot;SoftKey_5005&quot;"/>
+			<Parameter Name="u16ObjId_7" Value="SoftKey_5006"/>
+			<Parameter Name="DigitalInput_7" Value="&quot;SoftKey_5006&quot;"/>
+			<Parameter Name="u16ObjId_8" Value="SoftKey_5007"/>
+			<Parameter Name="DigitalInput_8" Value="&quot;SoftKey_5007&quot;"/>
+		</FB>
+		<FB Name="UT_SoftkeyMapping_2" Type="UT_SoftkeyMapping" Comment="" x="2400.0" y="0.0">
+			<Parameter Name="QI" Value="TRUE"/>
+			<Parameter Name="u8SAMember" Value="255"/>
+			<Parameter Name="u16ObjId_1" Value="SoftKey_5008"/>
+			<Parameter Name="DigitalInput_1" Value="&quot;SoftKey_5008&quot;"/>
+			<Parameter Name="u16ObjId_2" Value="SoftKey_5009"/>
+			<Parameter Name="DigitalInput_2" Value="&quot;SoftKey_5009&quot;"/>
+			<Parameter Name="u16ObjId_3" Value="SoftKey_5010"/>
+			<Parameter Name="DigitalInput_3" Value="&quot;SoftKey_5010&quot;"/>
+			<Parameter Name="u16ObjId_4" Value="SoftKey_5011"/>
+			<Parameter Name="DigitalInput_4" Value="&quot;SoftKey_5011&quot;"/>
+			<Parameter Name="u16ObjId_5" Value="0"/>
+			<Parameter Name="DigitalInput_5" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_6" Value="0"/>
+			<Parameter Name="DigitalInput_6" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_7" Value="0"/>
+			<Parameter Name="DigitalInput_7" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_8" Value="0"/>
+			<Parameter Name="DigitalInput_8" Value="&quot;&quot;"/>
+		</FB>
+		<EventConnections>
+			<Connection Source="INIT" Destination="UT_SoftkeyMapping_1.INIT" Comment="" dx1="660.0">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+			<Connection Source="INIT" Destination="UT_SoftkeyMapping_2.INIT" Comment="" dx1="1666.6666666666667">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+		</EventConnections>
+	</SubAppNetwork>
+</SubAppType>

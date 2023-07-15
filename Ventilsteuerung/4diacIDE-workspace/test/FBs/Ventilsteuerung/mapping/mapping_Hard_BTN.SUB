@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="mapping_Hard_BTN" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2023-02-07">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="">
+			</SubAppEvent>
+		</SubAppEventInputs>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<FB Name="Hutschienenmoped_3_DI" Type="Hutschienenmoped_3_DI" Comment="" x="3006.666666666667" y="306.6666666666667">
+			<Parameter Name="QI" Value="TRUE"/>
+			<Parameter Name="u8SAMember" Value="255"/>
+			<Parameter Name="u16ObjId" Value="65535"/>
+			<Parameter Name="DigitalInput_I1" Value="&quot;DigitalInput_I1&quot;"/>
+			<Parameter Name="DigitalInput_I2" Value="&quot;DigitalInput_I2&quot;"/>
+			<Parameter Name="DigitalInput_I3" Value="&quot;DigitalInput_I3&quot;"/>
+		</FB>
+		<EventConnections>
+			<Connection Source="INIT" Destination="Hutschienenmoped_3_DI.INIT" Comment="" dx1="840.0">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+		</EventConnections>
+	</SubAppNetwork>
+</SubAppType>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="mapping" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2023-07-15">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="">
+			</SubAppEvent>
+		</SubAppEventInputs>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<SubApp Name="mapping_BTN" Type="mapping_BTN" Comment="" x="-666.6666666666667" y="-533.3333333333334">
+			<Attribute Name="width" Type="LREAL" Value="1333.3333333333335"/>
+			<Attribute Name="height" Type="LREAL" Value="666.6666666666667"/>
+		</SubApp>
+		<SubApp Name="mapping_SFK" Type="mapping_SFK" Comment="" x="-666.6666666666667" y="533.3333333333334">
+			<Attribute Name="width" Type="LREAL" Value="1333.3333333333335"/>
+			<Attribute Name="height" Type="LREAL" Value="666.6666666666667"/>
+		</SubApp>
+		<SubApp Name="mapping_AUX" Type="mapping_AUX" Comment="" x="-666.6666666666667" y="-1066.6666666666667">
+			<Attribute Name="width" Type="LREAL" Value="1333.3333333333335"/>
+			<Attribute Name="height" Type="LREAL" Value="666.6666666666667"/>
+		</SubApp>
+		<SubApp Name="mapping_Hard_BTN" Type="mapping_Hard_BTN" Comment="" x="-666.6666666666667" y="0.0">
+		</SubApp>
+		<SubApp Name="mapping_OUTPUT" Type="mapping_OUTPUT" Comment="" x="-666.6666666666667" y="1066.6666666666667">
+		</SubApp>
+		<EventConnections>
+			<Connection Source="INIT" Destination="mapping_BTN.INIT" Comment="" dx1="593.3333333333334">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+			<Connection Source="INIT" Destination="mapping_SFK.INIT" Comment="" dx1="593.3333333333334">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+			<Connection Source="INIT" Destination="mapping_AUX.INIT" Comment="" dx1="593.3333333333334">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+			<Connection Source="INIT" Destination="mapping_Hard_BTN.INIT" Comment="" dx1="593.3333333333334">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+			<Connection Source="INIT" Destination="mapping_OUTPUT.INIT" Comment="" dx1="593.3333333333334">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+		</EventConnections>
+	</SubAppNetwork>
+</SubAppType>

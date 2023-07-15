@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="mapping_OUTPUT" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2023-02-07">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="">
+			</SubAppEvent>
+		</SubAppEventInputs>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<FB Name="Hutschienenmoped_4_DO" Type="Hutschienenmoped_4_DO" Comment="" x="3393.3333333333335" y="1640.0">
+			<Parameter Name="QI" Value="TRUE"/>
+			<Parameter Name="u8SAMember" Value="255"/>
+			<Parameter Name="u16ObjId" Value="65535"/>
+			<Parameter Name="DigitalOutput_Q1" Value="&quot;DigitalOutput_Q1&quot;"/>
+			<Parameter Name="DigitalOutput_Q2" Value="&quot;DigitalOutput_Q2&quot;"/>
+			<Parameter Name="DigitalOutput_Q3" Value="&quot;DigitalOutput_Q3&quot;"/>
+			<Parameter Name="DigitalOutput_Q4" Value="&quot;DigitalOutput_Q4&quot;"/>
+		</FB>
+		<EventConnections>
+			<Connection Source="INIT" Destination="Hutschienenmoped_4_DO.INIT" Comment="" dx1="1033.3333333333335"/>
+		</EventConnections>
+	</SubAppNetwork>
+</SubAppType>
