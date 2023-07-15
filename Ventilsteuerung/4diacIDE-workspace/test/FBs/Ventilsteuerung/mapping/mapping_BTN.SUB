@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="mapping_BTN" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2023-02-07">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="">
+			</SubAppEvent>
+		</SubAppEventInputs>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<FB Name="UT_ButtonMapping_5_7" Type="UT_ButtonMapping" Comment="" x="4266.666666666667" y="0.0">
+			<Parameter Name="QI" Value="TRUE"/>
+			<Parameter Name="u8SAMember" Value="255"/>
+			<Parameter Name="u16ObjId_1" Value="Button_6000"/>
+			<Parameter Name="DigitalInput_1" Value="&quot;Button_6000&quot;"/>
+			<Parameter Name="u16ObjId_2" Value="Button_6001"/>
+			<Parameter Name="DigitalInput_2" Value="&quot;Button_6001&quot;"/>
+			<Parameter Name="u16ObjId_3" Value="0"/>
+			<Parameter Name="DigitalInput_3" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_4" Value="0"/>
+			<Parameter Name="DigitalInput_4" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_5" Value="0"/>
+			<Parameter Name="DigitalInput_5" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_6" Value="0"/>
+			<Parameter Name="DigitalInput_6" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_7" Value="0"/>
+			<Parameter Name="DigitalInput_7" Value="&quot;&quot;"/>
+			<Parameter Name="u16ObjId_8" Value="0"/>
+			<Parameter Name="DigitalInput_8" Value="&quot;&quot;"/>
+		</FB>
+		<EventConnections>
+			<Connection Source="INIT" Destination="UT_ButtonMapping_5_7.INIT" Comment="" dx1="1460.0"/>
+		</EventConnections>
+	</SubAppNetwork>
+</SubAppType>
