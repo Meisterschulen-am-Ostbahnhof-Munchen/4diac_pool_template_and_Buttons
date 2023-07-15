@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="Outputs" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2023-07-15">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="">
+			</SubAppEvent>
+		</SubAppEventInputs>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<SubApp Name="Momentary_on" Comment="Tastend Softkey 5000 auf Q1" x="-266.6666666666667" y="-933.3333333333334">
+			<SubAppInterfaceList>
+				<SubAppEventInputs>
+					<SubAppEvent Name="INIT" Type="Event" Comment="">
+					</SubAppEvent>
+				</SubAppEventInputs>
+			</SubAppInterfaceList>
+			<SubAppNetwork>
+				<FB Name="SoftKey_5000" Type="IX" Comment="" x="266.6666666666667" y="0.0">
+					<Parameter Name="QI" Value="TRUE"/>
+				</FB>
+				<FB Name="DigitalOutput_Q1" Type="QX" Comment="" x="2693.3333333333335" y="0.0">
+					<Parameter Name="QI" Value="TRUE"/>
+				</FB>
+				<EventConnections>
+					<Connection Source="SoftKey_5000.INITO" Destination="DigitalOutput_Q1.INIT" Comment=""/>
+					<Connection Source="SoftKey_5000.IND" Destination="DigitalOutput_Q1.REQ" Comment="" dx1="866.6666666666667"/>
+					<Connection Source="INIT" Destination="SoftKey_5000.INIT" Comment="" dx1="80.0" dx2="80.0" dy="86.66666666666667"/>
+				</EventConnections>
+				<DataConnections>
+					<Connection Source="SoftKey_5000.IN" Destination="DigitalOutput_Q1.OUT" Comment="" dx1="866.6666666666667"/>
+				</DataConnections>
+			</SubAppNetwork>
+			<Attribute Name="Unfolded" Type="STRING" Value="true"/>
+			<Attribute Name="width" Type="LREAL" Value="4540.0"/>
+			<Attribute Name="height" Type="LREAL" Value="1740.0"/>
+		</SubApp>
+		<EventConnections>
+			<Connection Source="INIT" Destination="Momentary_on.INIT" Comment="" dx1="766.6666666666667">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+		</EventConnections>
+	</SubAppNetwork>
+</SubAppType>

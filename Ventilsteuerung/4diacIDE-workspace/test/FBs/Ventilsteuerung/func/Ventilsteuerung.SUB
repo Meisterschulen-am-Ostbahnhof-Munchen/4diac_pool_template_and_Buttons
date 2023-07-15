@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SubAppType Name="Ventilsteuerung" Comment="Subapplication Type">
+	<Identification Standard="61499-2">
+	</Identification>
+	<VersionInfo Version="1.0" Author="franz" Date="2023-02-07">
+	</VersionInfo>
+	<SubAppInterfaceList>
+		<SubAppEventInputs>
+			<SubAppEvent Name="INIT" Type="Event" Comment="">
+			</SubAppEvent>
+		</SubAppEventInputs>
+	</SubAppInterfaceList>
+	<SubAppNetwork>
+		<SubApp Name="mapping" Type="mapping" Comment="" x="3293.3333333333335" y="666.6666666666667">
+		</SubApp>
+		<SubApp Name="Outputs" Type="Outputs" Comment="" x="3293.3333333333335" y="1633.3333333333335">
+		</SubApp>
+		<EventConnections>
+			<Connection Source="INIT" Destination="mapping.INIT" Comment="" dx1="980.0">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+			<Connection Source="INIT" Destination="Outputs.INIT" Comment="" dx1="980.0">
+				<Attribute Name="Visible" Type="STRING" Value="false"/>
+			</Connection>
+		</EventConnections>
+	</SubAppNetwork>
+</SubAppType>
